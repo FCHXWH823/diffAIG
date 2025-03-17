@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='utf-8') as fh:
     long_description = fh.read()
 
 setup(
-    name='difflogic',
+    name='diffAIG',
     version='0.1.0',
     author='Felix Petersen',
     author_email='ads0600@felix-petersen.de',
@@ -23,8 +23,8 @@ setup(
         'Topic :: Software Development :: Libraries',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
-    package_dir={'difflogic': 'difflogic'},
-    packages=['difflogic'],
+    package_dir={'diffAIG': 'difflogic'},  # Your source code remains in the 'difflogic' folder.
+    packages=['diffAIG'],  # The installed package will be named diffAIG.
     ext_modules=[CUDAExtension('difflogic_cuda', [
         'difflogic/cuda/difflogic.cpp',
         'difflogic/cuda/difflogic_kernel.cu',
