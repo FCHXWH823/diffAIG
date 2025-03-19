@@ -25,7 +25,7 @@ setup(
     ],
     package_dir={'diffAIG': 'difflogic'},  # Your source code remains in the 'difflogic' folder.
     packages=['diffAIG'],  # The installed package will be named diffAIG.
-    ext_modules=[CUDAExtension('difflogic_cuda', [
+    ext_modules=[CUDAExtension('diffAIG_cuda', [
         'difflogic/cuda/difflogic.cpp',
         'difflogic/cuda/difflogic_kernel.cu',
     ], extra_compile_args={'nvcc': ['-lineinfo']})],
